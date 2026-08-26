@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Units Demo</title>
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .parent {
+      width: 600px;
+      height: 500px;
+      border: 3px solid black;
+      padding: 20px;
+      margin: 30px auto;
+    }
+
+    .box {
+      background-color: lightgreen;
+      border: 3px solid tomato;
+      padding: 10px;
+      margin: 10px;
+    }
+
+
+    /* 1. PIXEL
+       Fixed size
+    */
+
+    .px {
+      /* width: 300px; */
+      /* height: 100px; */
+    }
+
+
+    /* 2. PERCENTAGE
+       Relative to the parent
+    */
+
+    .percent {
+      /* width: 50%; */
+      /* height: 50%; */
+    }
+
+
+    /* 3. EM
+       Relative to the element's font size / context
+    */
+
+    .em {
+      /* font-size: 2em; */
+      /* padding: 2em; */
+    }
+
+
+    /* 4. REM
+       Relative to the root HTML font size
+    */
+
+    html {
+      font-size: 16px;
+    }
+
+    .rem {
+      /* width: 20rem; */
+      /* font-size: 2rem; */
+      /* padding: 1rem; */
+    }
+
+
+    /* 5. VW
+       Relative to viewport width
+    */
+
+    .vw {
+      /* width: 50vw; */
+    }
+
+
+    /* 6. VH
+       Relative to viewport height
+    */
+
+    .vh {
+      /* height: 30vh; */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Units Demo</h1>
+
+  <div class="parent">
+
+    <h2>Parent Box</h2>
+
+    <div class="box px">
+      PX - Pixels
+    </div>
+
+    <div class="box percent">
+      % - Percentage
+    </div>
+
+    <div class="box em">
+      EM - Relative to Font Size
+    </div>
+
+    <div class="box rem">
+      REM - Relative to Root Font Size
+    </div>
+
+    <div class="box vw">
+      VW - Viewport Width
+    </div>
+
+    <div class="box vh">
+      VH - Viewport Height
+    </div>
+
+  </div>
+
+</body>
+</html>
