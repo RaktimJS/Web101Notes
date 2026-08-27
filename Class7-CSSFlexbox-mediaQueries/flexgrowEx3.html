@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Flexbox Order</title>
+
+  <style>
+    .container {
+      display: flex;
+      height: 300px;
+      border: 2px solid black;
+      background-color: tomato;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: dodgerblue;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+
+    .box1 {
+      order: 4;
+      flex-grow: 2;
+    }
+
+    .box3 {
+      order: 2;
+      flex-shrink: 100;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Flexbox Order</h1>
+
+  <div class="container">
+    <div class="box box1">1</div>
+    <div class="box">2</div>
+    <div class="box box3">3</div>
+    <div class="box">4</div>
+  </div>
+
+</body>
+
+</html>

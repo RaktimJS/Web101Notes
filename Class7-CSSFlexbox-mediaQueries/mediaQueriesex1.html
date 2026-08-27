@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Media Queries Demo</title>
+
+  <style>
+
+    /* Default styles */
+    body {
+      font-size: 16px;
+      margin: 0;
+      padding: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      padding: 30px;
+      border: 3px solid black;
+    }
+
+
+    /* Mobile: 600px or less */
+    @media (max-width: 600px) {
+
+      body {
+        font-size: 14px;
+        background-color: lightcoral;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+    }
+
+
+    /* Tablet: 601px - 900px */
+    @media (min-width: 601px) and (max-width: 900px) {
+
+      body {
+        font-size: 18px;
+        background-color: lightblue;
+      }
+
+      .container {
+        text-align: left;
+      }
+
+    }
+
+
+    /* Desktop: 901px and above */
+    @media (min-width: 901px) {
+
+      body {
+        font-size: 20px;
+        background-color: lightgreen;
+      }
+
+      .container {
+        padding: 50px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Responsive Website</h1>
+
+    <p>
+      Resize the browser window and observe what happens.
+    </p>
+
+    <p>
+      The font size, background color, alignment and padding
+      change according to the viewport width.
+    </p>
+
+    <h2>Current Breakpoints</h2>
+
+    <ul>
+      <li>600px or less → Mobile</li>
+      <li>601px - 900px → Tablet</li>
+      <li>901px or more → Desktop</li>
+    </ul>
+
+  </div>
+
+</body>
+
+</html>
