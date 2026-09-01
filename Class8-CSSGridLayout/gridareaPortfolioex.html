@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Portfolio</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: grid;
+
+      grid-template-areas:
+        "header header header header"
+        "nav    content content aside"
+        "nav    content content aside"
+        "footer footer footer footer";
+
+      grid-template-columns: 180px 1fr 1fr 200px;
+      grid-template-rows: 80px 1fr 1fr 70px;
+
+      gap: 5px;
+    }
+
+
+    /* Connecting HTML elements to Grid Areas */
+
+    header {
+      grid-area: header;
+
+      background-color: tomato;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+
+
+    nav {
+      grid-area: nav;
+
+      background-color: dodgerblue;
+      color: white;
+
+      padding: 20px;
+    }
+
+
+    main {
+      grid-area: content;
+
+      background-color: lightgray;
+
+      padding: 30px;
+    }
+
+
+    aside {
+      grid-area: aside;
+
+      background-color: lightgreen;
+
+      padding: 20px;
+    }
+
+
+    footer {
+      grid-area: footer;
+
+      background-color: black;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Shubham's Portfolio</h1>
+  </header>
+
+
+  <nav>
+
+    <h3>Navigation</h3>
+
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">Skills</a>
+    <a href="#">Contact</a>
+
+  </nav>
+
+
+  <main>
+
+    <h2>Hi, I'm Shubham 👋</h2>
+
+    <p>
+      I'm a Software Engineer who enjoys building backend
+      systems and teaching web development.
+    </p>
+
+    <h3>Projects</h3>
+
+    <p>
+      Portfolio Website • E-commerce API • RizzIzBizz
+    </p>
+
+  </main>
+
+
+  <aside>
+
+    <h3>About Me</h3>
+
+    <p>
+      Software Engineer
+    </p>
+
+    <p>
+      Node.js • JavaScript • MongoDB
+    </p>
+
+  </aside>
+
+
+  <footer>
+
+    <p>© 2026 Shubham</p>
+
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Grid Areas - 10x10</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+
+      display: grid;
+
+      /* 10 columns */
+      grid-template-columns: repeat(10, 1fr);
+
+      /* 10 rows */
+      grid-template-rows: repeat(10, 1fr);
+
+      gap: 5px;
+
+      /* Named grid areas */
+      grid-template-areas:
+        "header header header header header header header header header header"
+        "header header header header header header header header header header"
+        "nav    nav    content content content content content content side   side"
+        "nav    nav    content content content content content content side   side"
+        "nav    nav    content content content content content content side   side"
+        "nav    nav    content content content content content content side   side"
+        "nav    nav    content content content content content content side   side"
+        "nav    nav    content content content content content content side   side"
+        "nav    nav    footer  footer  footer  footer  footer  footer  side   side"
+        "nav    nav    footer  footer  footer  footer  footer  footer  side   side";
+    }
+
+    header {
+      grid-area: header;
+      background-color: tomato;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: dodgerblue;
+    }
+
+    main {
+      grid-area: content;
+      background-color: lightgreen;
+    }
+
+    aside {
+      grid-area: side;
+      background-color: gold;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: violet;
+    }
+
+    header,
+    nav,
+    main,
+    aside,
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>HEADER</header>
+
+  <nav>NAV</nav>
+
+  <main>CONTENT</main>
+
+  <aside>SIDEBAR</aside>
+
+  <footer>FOOTER</footer>
+
+</body>
+
+</html>
