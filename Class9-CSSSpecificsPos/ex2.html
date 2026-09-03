@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Specificity Demo</title>
+
+  <style>
+
+    /* -----------------------------------------
+       SELECTOR 1: ul#fruits li
+       -----------------------------------------
+
+       Count the three specificity buckets:
+
+       ID      = 1  → #fruits
+       CLASS   = 0  → no class/pseudo-class
+       ELEMENT = 2  → ul + li
+
+       Specificity = (1, 0, 2)
+    */
+
+    ul#fruits li {
+      color: blue;
+    }
+
+
+    /* -----------------------------------------
+       SELECTOR 2: ul#fruits li.favourite
+       -----------------------------------------
+
+       Count again:
+
+       ID      = 1  → #fruits
+       CLASS   = 1  → .favourite
+       ELEMENT = 2  → ul + li
+
+       Specificity = (1, 1, 2)
+    */
+
+    ul#fruits li.favourite {
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Specificity</h1>
+
+  <ul id="fruits">
+
+    <li>Apple</li>
+
+    <!-- This element matches:
+         ul#fruits li
+
+         Specificity = (1, 0, 2)
+
+         Therefore → BLUE
+    -->
+
+    <li class="favourite">
+      Mango
+    </li>
+
+    <!-- This element matches BOTH selectors:
+
+         Selector 1:
+         ul#fruits li
+         = (1, 0, 2)
+
+         Selector 2:
+         ul#fruits li.favourite
+         = (1, 1, 2)
+
+         Now CSS compares specificity
+         from LEFT → RIGHT.
+
+         ID:       1 = 1  → TIE
+         CLASS:    0 < 1  → Selector 2 WINS
+
+         We don't even need to compare
+         the element count.
+
+         Therefore → RED
+    -->
+
+    <li>Orange</li>
+
+    <!-- Only matches:
+
+         ul#fruits li
+         = (1, 0, 2)
+
+         Therefore → BLUE
+    -->
+
+  </ul>
+
+</body>
+</html>
