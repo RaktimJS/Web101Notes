@@ -15,4 +15,5 @@ a:hover   { color: darkblue; }
     background-image: url(pic.jpg);
     background-repeat: no-repeat;
     background-size: 400px;
+    flex-direction: ;
 }
