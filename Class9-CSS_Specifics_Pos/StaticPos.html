@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Position Static</title>
+
+  <style>
+    .box {
+      width: 150px;
+      height: 100px;
+      background-color: tomato;
+
+      /* static is the default position */
+      position: static;
+
+      /*
+        The element stays in normal document flow.
+
+        top, right, bottom and left
+        do NOT affect a static element.
+      */
+
+      top: 50px;
+      left: 50px;
+    }
+
+    .box2 {
+      width: 150px;
+      height: 100px;
+      background-color: steelblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Static Position</h1>
+
+  <div class="box">
+    Box 1
+  </div>
+
+  <div class="box2">
+    Box 2
+  </div>
+
+</body>
+</html>

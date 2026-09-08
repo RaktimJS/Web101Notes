@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Animation Demo</title>
+
+  <style>
+
+    /* The element we want to animate */
+    .box {
+      width: 100px;
+      height: 100px;
+
+      background-color: red;
+
+      /*
+        animation-name tells CSS which
+        @keyframes animation to use.
+      */
+      animation-name: moveBox;
+
+      /*
+        animation-duration tells CSS
+        how long ONE complete animation takes.
+
+        Here:
+        2 seconds → start to finish
+      */
+      animation-duration: 2s;
+    }
+
+
+    /*
+      @keyframes defines the animation.
+
+      We are saying:
+
+      START:
+      box is at its original position.
+
+      END:
+      box has moved 300px to the right.
+    */
+    @keyframes moveBox {
+
+      /* Starting state */
+      from {
+        transform: translateX(0);
+      }
+
+      /* Ending state */
+      to {
+        transform: translateX(300px);
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Animation</h1>
+
+  <div class="box"></div>
+
+</body>
+</html>

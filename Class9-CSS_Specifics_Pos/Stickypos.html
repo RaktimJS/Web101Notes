@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Position Sticky</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .header {
+      height: 100px;
+      background-color: tomato;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      font-size: 30px;
+    }
+
+    .menu {
+      background-color: black;
+      color: white;
+
+      padding: 20px;
+
+      /*
+        Sticky behaves normally initially.
+
+        When it reaches top: 0,
+        it sticks to the top.
+      */
+      position: sticky;
+      top: 0;
+    }
+
+    .content {
+      height: 1500px;
+      padding: 30px;
+      background-color: #eee;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    Website Header
+  </div>
+
+  <div class="menu">
+    Sticky Navigation
+  </div>
+
+  <div class="content">
+
+    <h1>Scroll Down</h1>
+
+    <p>
+      Keep scrolling and watch the navigation.
+    </p>
+
+    <p>
+      The navigation starts in its normal
+      position.
+    </p>
+
+    <p>
+      Once it reaches the top of the viewport,
+      it sticks there.
+    </p>
+
+  </div>
+
+</body>
+</html>

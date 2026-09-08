@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Color Animation</title>
+
+  <style>
+
+    /* The element we want to animate */
+    .box {
+      width: 150px;
+      height: 150px;
+
+      /* Starting color */
+      background-color: red;
+
+      /*
+        Connect the element to
+        our keyframes animation.
+      */
+      animation-name: changeColor;
+
+      /*
+        The animation takes 2 seconds
+        to go from red → blue.
+      */
+      animation-duration: 2s;
+    }
+
+
+    /*
+      @keyframes defines what changes
+      during the animation.
+    */
+    @keyframes changeColor {
+
+      /* Starting state */
+      from {
+        background-color: red;
+      }
+
+      /* Ending state */
+      to {
+        background-color: blue;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Color Animation</h1>
+
+  <div class="box"></div>
+
+</body>
+</html>

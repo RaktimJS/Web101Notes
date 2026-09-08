@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Positioning Demo</title>
+
+  <style>
+
+    /* Basic styling */
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .container {
+      width: 80%;
+      height: 500px;
+      margin: 50px auto;
+
+      background-color: #ddd;
+      border: 4px solid black;
+
+      /* IMPORTANT:
+         Uncomment this when demonstrating
+         position: absolute;
+         
+         The absolute element will then use
+         this container as its positioning reference.
+      */
+
+      /* position: relative; */
+    }
+
+
+    /* ---------------------------------------
+       COMMON BOX STYLING
+       --------------------------------------- */
+
+    .box {
+      width: 120px;
+      height: 120px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      font-weight: bold;
+
+      background-color: tomato;
+
+      /*
+        Try commenting/uncommenting the
+        positioning styles below.
+      */
+
+
+      /* =====================================
+         1. STATIC
+         ===================================== */
+
+      /*
+      position: static;
+      */
+
+      /*
+        static = normal/default positioning.
+
+        top / right / bottom / left
+        do NOT affect a static element.
+      */
+
+
+      /* =====================================
+         2. RELATIVE
+         ===================================== */
+
+      /*
+      position: relative;
+
+      top: 50px;
+      left: 50px;
+      */
+
+      /*
+        relative = element stays in the
+        normal document flow.
+
+        But we can visually move it
+        relative to its original position.
+
+        IMPORTANT:
+        Its original space is still reserved.
+      */
+
+
+      /* =====================================
+         3. ABSOLUTE
+         ===================================== */
+
+      /*
+      position: absolute;
+
+      top: 50px;
+      left: 50px;
+      */
+
+      /*
+        absolute = removed from normal
+        document flow.
+
+        It is positioned relative to the
+        nearest positioned ancestor.
+
+        Try:
+
+        .container {
+          position: relative;
+        }
+
+        If container is NOT positioned,
+        the box may position relative to
+        another ancestor / initial containing block.
+      */
+
+
+      /* =====================================
+         4. FIXED
+         ===================================== */
+
+      /*
+      position: fixed;
+
+      bottom: 30px;
+      right: 30px;
+      */
+
+      /*
+        fixed = positioned relative to
+        the viewport.
+
+        It stays in the same place even
+        when the page is scrolled.
+      */
+
+
+      /* =====================================
+         5. STICKY
+         ===================================== */
+
+      /*
+      position: sticky;
+
+      top: 20px;
+      */
+
+      /*
+        sticky behaves like a normal element
+        until it reaches the given threshold.
+
+        Then it "sticks" to that position
+        while scrolling.
+      */
+
+    }
+
+
+    /* ---------------------------------------
+       EXTRA BOXES
+       --------------------------------------- */
+
+    .box2 {
+      width: 120px;
+      height: 120px;
+
+      background-color: steelblue;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      font-weight: bold;
+
+      margin: 20px;
+    }
+
+
+    /* ---------------------------------------
+       STICKY DEMO
+       --------------------------------------- */
+
+    .sticky-container {
+      width: 80%;
+      height: 600px;
+
+      margin: 50px auto;
+
+      background-color: white;
+      border: 3px solid #555;
+
+      overflow: auto;
+    }
+
+    .sticky-header {
+      padding: 20px;
+
+      background-color: purple;
+      color: white;
+
+      font-weight: bold;
+
+      /*
+        Uncomment to demonstrate sticky
+      */
+
+      /*
+      position: sticky;
+      top: 0;
+      */
+
+    }
+
+
+    .content {
+      height: 1000px;
+      padding: 30px;
+    }
+
+
+    /* ---------------------------------------
+       FIXED DEMO LABEL
+       --------------------------------------- */
+
+    .fixed-demo {
+
+      width: 120px;
+      height: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: black;
+      color: white;
+
+      
+        /* Uncomment this separately to show
+        fixed positioning. */
+
+      /* position: fixed;
+      bottom: 20px;
+      right: 20px; */
+     
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <h1>CSS Positioning Playground</h1>
+
+
+  <!-- =====================================
+       MAIN POSITIONING DEMO
+       ===================================== -->
+
+  <div class="container">
+
+    <div class="box">
+      BOX
+    </div>
+
+    <div class="box2">
+      NORMAL BOX
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       STICKY DEMO
+       ===================================== -->
+
+  <div class="sticky-container">
+
+    <div class="sticky-header">
+      STICKY HEADER
+    </div>
+
+    <div class="content">
+
+      <h2>Scroll inside this box ↓</h2>
+
+      <p>
+        The sticky element will stick to the
+        top when you scroll.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+
+      <p>
+        Keep scrolling...
+      </p>
+
+      <p>
+        Keep scrolling...
+      </p>
+
+      <p>
+        Keep scrolling...
+      </p>
+
+      <p>
+        Keep scrolling...
+      </p>
+
+      <p>
+        Keep scrolling...
+      </p>
+
+      <p>
+        Keep scrolling...
+      </p>
+
+      <p>
+        Keep scrolling...
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       FIXED DEMO
+       ===================================== -->
+
+  <div class="fixed-demo">
+    FIXED
+  </div>
+
+
+</body>
+</html>

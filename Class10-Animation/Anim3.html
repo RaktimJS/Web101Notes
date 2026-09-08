@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Multi-Step Animation</title>
+
+  <style>
+
+    .box {
+      width: 150px;
+      height: 150px;
+
+      /* Initial color */
+      background-color: red;
+
+      /*
+        Connect the element to
+        the colorChange animation.
+      */
+      animation-name: colorChange;
+
+      /*
+        Complete animation takes 3 seconds.
+      */
+      animation-duration: 3s;
+    }
+
+
+    /*
+      Multi-step animation
+
+      0%   → Starting state
+      50%  → Middle state
+      100% → Ending state
+
+      The browser automatically
+      creates the transition between
+      these states.
+    */
+    @keyframes colorChange {
+
+      /* Animation starts */
+      0% {
+        background-color: red;
+      }
+
+      /* Halfway through */
+      50% {
+        background-color: yellow;
+      }
+
+      /* Animation ends */
+      100% {
+        background-color: green;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Multi-Step CSS Animation</h1>
+
+  <div class="box"></div>
+
+</body>
+</html>

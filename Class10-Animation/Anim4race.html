@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Animation Timing Functions</title>
+
+  <style>
+
+    /* -----------------------------------
+       COMMON BOX STYLING
+       ----------------------------------- */
+
+    .box {
+      width: 100px;
+      height: 50px;
+
+      margin: 20px 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+      background-color: tomato;
+
+      /*
+        All boxes use the same animation
+        and same duration.
+      */
+      animation-name: moveBox;
+      animation-duration: 4s;
+
+      /*
+        Keep the box at the final position
+        after the animation finishes.
+      */
+      animation-fill-mode: forwards;
+    }
+
+
+    /* -----------------------------------
+       DIFFERENT TIMING FUNCTIONS
+       ----------------------------------- */
+
+    .linear {
+      /*
+        Constant speed.
+
+        The box moves at the same speed
+        throughout the animation.
+      */
+      animation-timing-function: linear;
+    }
+
+
+    .ease {
+      /*
+        Default timing function.
+
+        Starts slowly,
+        speeds up,
+        then slows down.
+      */
+      animation-timing-function: ease;
+    }
+
+
+    .ease-in {
+      /*
+        Starts slowly,
+        then speeds up.
+      */
+      animation-timing-function: ease-in;
+    }
+
+
+    .ease-out {
+      /*
+        Starts quickly,
+        then slows down.
+      */
+      animation-timing-function: ease-out;
+    }
+
+
+    .ease-in-out {
+      /*
+        Starts slowly,
+        speeds up in the middle,
+        then slows down.
+      */
+      animation-timing-function: ease-in-out;
+    }
+
+
+    /* -----------------------------------
+       THE ANIMATION
+       ----------------------------------- */
+
+    @keyframes moveBox {
+
+      /*
+        Animation starts here.
+      */
+      from {
+        transform: translateX(0);
+      }
+
+      /*
+        Animation ends 500px to the right.
+      */
+      to {
+        transform: translateX(500px);
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Animation Timing Functions</h1>
+
+
+  <!-- Linear -->
+  <div class="box linear">
+    Linear
+  </div>
+
+
+  <!-- Ease -->
+  <div class="box ease">
+    Ease
+  </div>
+
+
+  <!-- Ease In -->
+  <div class="box ease-in">
+    Ease In
+  </div>
+
+
+  <!-- Ease Out -->
+  <div class="box ease-out">
+    Ease Out
+  </div>
+
+
+  <!-- Ease In Out -->
+  <div class="box ease-in-out">
+    Ease In-Out
+  </div>
+
+
+</body>
+</html>
